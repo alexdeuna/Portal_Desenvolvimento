@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>:: Portal de Aplicações OSS ::</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet" />  
+        <link href="../css/oi.css" rel="stylesheet" />
+        <link href="../css/jquery-ui.css" rel="stylesheet" />
+
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js" async="TRUE"></script>
+        <script src="../js/jquery.chrony.min.js"></script>
+        <script src="../js/oi.js"></script>
+        <script src="../js/jquery-ui.js"></script>
+        <script src="../js/validator.js"></script>
+
+    </head>
+    <body>
+        <!--CONTAINER-->
+        <div class="container rodape" style="margin-top:75px;">
+            <!--TOPO-->
+            <div class="row">
+                <div class="col-lg-12 espaco"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3"> 
+                    <img class="img-responsive center-block oi-logooss" src="../img/logo_oss_cor_100.gif"/>
+                </div>
+                <div class="col-lg-6">
+
+                    <form name="fadm" action="./adm.php" method="POST" role="form">
+                        <div class="form-group form-group-sm">
+                            <div class="form-group text-center">
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                    </span>
+                                    <input type="text" class="form-control" id="login_adm" name="login_adm" placeholder="Autorizado" required>
+                                </div> 
+                                <div class="input-group input-group-sm espaco">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-envelope"></span>
+                                    </span>
+                                    <input type="password" class="form-control" id="senha_adm" name="senha_adm"  placeholder="Password" required>
+                                </div> 
+                                <button type="submit" class="btn btn-primary">Entrar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-3"> 
+                    <img class="img-responsive center-block oi-logooss" src="../img/logo-oi.png"/>
+                </div>
+            </div>
+            <!-- FIM CONTEUDO-->
+            <!--RODAPE-->
+            <div class="row">
+                <div class="col-lg-12" align="center">
+                    © Copyright 2000-2014 <strong> Portal OSS </strong>Todos os direitos reservados.
+                </div>
+            </div>
+            <!--FIM RODAPE-->
+        </div>
+        <nav class="navbar-fixed-bottom oi-cor espaco"></nav>
+        <nav class="navbar-fixed-top oi-cor espaco"></nav>
+        <!--FIM CONTAINER-->
+    </body>
+</html>

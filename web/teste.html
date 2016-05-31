@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>TESTE</title>
+        <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+        <script src="js/bootstrap.min.js"></script>
+        <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+        <script src="js/jquery.min.js"></script>
+        <link href="css/style.css" rel='stylesheet' type='text/css' />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var intervalo = window.setInterval(logo, 5000);
+                var totalCount = 2;
+                function logo() {
+                    var num = Math.ceil(Math.random() * totalCount);
+                    
+                    $("#foto1").remove();
+                    $("#foto").append("<img src=./img/" + num + ".png id='foto1'>");
+                }
+            });
+        </script>	
+    </head>
+    <body>
+        <div id="foto"><img src="./img/1.png" id="foto1"></div>
+       
+    </body>
+</html>

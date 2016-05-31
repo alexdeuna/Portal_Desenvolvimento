@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>:: Portal de Aplicações OSS ::</title>
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/bootstrap.min.js" async="TRUE"></script>
+        <link href="./css/bootstrap.min.css" rel="stylesheet">     
+        <script src="./js/jquery.chrony.min.js"></script>
+        <script src="./js/oi.js"></script>
+        <link href="./css/oi.css" rel="stylesheet">
+        <link href="./css/jquery-ui.css" rel="stylesheet" />
+        <script src="./js/jquery-ui.js"></script>
+        <script src="./js/validator.js"></script>
+    </head>
+    <body>
+        <div class="loader">
+            <img src="./img/load.GIF">
+        </div>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-inverse navbar-top nav-divider oi-navbar" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand oi-navbar-brand">Portal OSS</a>
+                </div> 
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>                            
+                        </li>
+                    </ul>
+                    <form name="flogin" action="" method="POST" role="form" class="navbar-form navbar-right">
+                        <div class="form-group-sm">
+                            <div class="form-group col-sm-12">
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                    </span><input type="text" class="form-control" name="login" placeholder="Autorizado" required value="admin">
+                                </div>
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-lock"></span>
+                                    </span><input type="password" class="form-control" name="senha" placeholder="Senha" required value="nirvana">
+                                </div>
+                                <button type="button" class="btn btn-primary btn-sm" id="acessar"> 
+                                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Acessar
+                                </button>
+                                <button class="btn btn-info btn-sm" type="button" id="ajuda-dialog-btn">Ajuda
+                                    <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+        <!--FIM NAVBAR--> 
+        <div id='msg' class='oi-alert oi-alert-danger'>
+            <span class='glyphicon glyphicon-thumbs-down'></span> 
+            Usuário ou senha Inválildos!
+        </div>
+        <!--CONTAINER-->
+        <div class="container oi-container" style="margin-top:75px;">
+            <!--TOPO-->
+            <div class="row espaco">
+                <div class="col-lg-2">
+                    <!--   <img class="img-responsive" src="../bootstrap/img/logo-oi.png"/> -->
+                </div>
+                <div class="col-lg-8">
+                    <div class="text-center oi-titulo">Portal de Aplicações</div>             
+                </div>
+                <div class="col-lg-2">
+                </div>
+            </div>
+            <!--CONTEUDO-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive center-block oi-logooss" src="./img/logo_oss_cor_150.gif"/>
+                    <div class="text-center oi-texto">Equipe de Plataformas SSO</div>      
+                    <div class="text-center oi-texto">Gerência de Operações SSO</div>      
+                    <div class="text-center oi-texto">Diretoria de Operações Centralizadas</div>      
+                </div>
+            </div>
+            <div class="row espaco">
+                <div class="col-lg-6">
+
+                    <div class="alert alert-danger oi-texto-ajuda">Solicitação de acesso <a href="./arquivos/POP_Solicitacao_Acesso_portal.pdf"  class="alert-link" target="_blank">clique aqui!</a></div>      
+                </div>
+                <div class="col-lg-6">
+                    <div class="alert alert-info oi-texto-ajuda">Dúvidas? <a href="mailto:PP-SegurancadeacessoOSS@oi.net.br?Subject=Dúvidas%20Portal%20OSS" class="alert-link"> PP-SegurancadeacessoOSS@oi.net.br </a> </div>      
+                </div>
+            </div>
+
+            <!-- FIM CONTEUDO-->
+            <!--RODAPE-->
+            <div class="row">
+                <div class="col-lg-12 rodape" align="center">
+                    <img class="img-responsive center-block" src="./img/logo_oss_cor_50.gif"/>
+                    © Copyright 2000-2014 <strong> Portal OSS </strong>Todos os direitos reservados.
+                </div>
+            </div>
+            <!--FIM RODAPE-->
+        </div>
+        <nav class="navbar-fixed-bottom oi-cor espaco"></nav>
+        <!--FIM CONTAINER-->
+        <!-- MODAL AJUDA -->
+        <div id="ajuda-dialog" title="Ajuda">
+            <form name="fajuda" action="" method="POST" role="form">
+                <div class="form- form-group-sm">
+                    <div class="form-group text-center">
+                        <p>Digite seu login e seu email e reset seu acesso.</p>
+                        <DIV class="espaco"></DIV>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </span>
+                            <input type="text" class="form-control" id="envia-login" placeholder="Autorizado">
+                        </div> 
+                        
+                        <div class="input-group input-group-sm espaco">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-envelope"></span>
+                            </span>
+                            <input type="email" class="form-control" id="envia-email" placeholder="Email">
+                        </div> 
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
